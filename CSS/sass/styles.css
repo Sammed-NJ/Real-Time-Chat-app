@@ -1,0 +1,72 @@
+nav {
+  color: #fff;
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav header i {
+  font-size: 32px;
+}
+nav header .head {
+  font-size: 1.4rem;
+}
+nav header > * {
+  padding: 0rem 0.5rem;
+}
+nav .nav_btns button {
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  margin: 0 0.5rem;
+  border-radius: 12px;
+  border: 0px;
+}
+nav .nav_btns .login_btn {
+  background-color: #00000000;
+}
+nav .nav_btns .login_btn:hover {
+  background: #000000ad;
+}
+nav .nav_btns .signup_btn {
+  background-color: #4D85E1;
+}
+nav .nav_btns .signup_btn:hover {
+  background-color: #366DC8;
+}
+
+.form_signup {
+  padding: 2rem;
+}
+
+.form_signup header {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+* {
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0A0F0D;
+}
+
+.wrapper {
+  background: #ffffff;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=styles.css.map */

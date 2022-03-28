@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text Me</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/sass/styles.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/
-    font-awesome/5.15.2/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,9 +21,22 @@
     />
   </head>
   <body>
-    <div class="wrapper">
+    <nav>
+      <header>
+        <i class="fa-regular fa-message"></i>
+        <div class="head">Real Time Chat App</div>
+      </header>
+      <div class="nav_btns">
+        <button class="login_btn">
+          <i class="fa-regular fa-user"></i>&nbsp;&nbsp;&nbsp; Login
+        </button>
+        <button class="signup_btn">
+          Sign Up &nbsp; <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- <div class="wrapper">
       <div class="form_signup">
-        <header>Text Me</header>
         <form action="">
           <div class="error_text">This is an error message!</div>
           <div class="name_details">
@@ -55,6 +67,8 @@
         </form>
         <div class="link">Already logged in? <a href="#">Login now</a></div>
       </div>
-    </div>
+    </div> -->
+
+    <script src="JS/togglers/signUp_toggle.js"></script>
   </body>
 </html>
