@@ -1,6 +1,166 @@
+.wrapper {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 1fr;
+  grid-template-rows: 0.2fr 1.6fr 1fr;
+  gap: 15px 15px;
+  grid-template-areas: "search_user_wrapper chats_wrapper chats_wrapper" "user_chat_wrapper chats_wrapper chats_wrapper" "user_chat_wrapper chats_wrapper chats_wrapper";
+  min-height: 85vh;
+}
+
+.search_user_wrapper {
+  grid-area: search_user_wrapper;
+  position: relative;
+}
+.search_user_wrapper input {
+  background: #212c27;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+}
+.search_user_wrapper button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00000000;
+  border: none;
+  cursor: pointer;
+}
+.search_user_wrapper button i {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.chats_wrapper {
+  grid-area: chats_wrapper;
+  background-color: #212C27;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.chats_wrapper .chat_text_box, .chats_wrapper .user_header {
+  width: 100%;
+}
+.chats_wrapper .user_header {
+  border-radius: 0.5rem 0.5rem 0px 0px;
+  background: #366DC8;
+  height: 80px;
+  color: #fff;
+}
+.chats_wrapper .user_header .user_content {
+  margin: 0.7rem;
+  display: flex;
+}
+.chats_wrapper .user_header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.chats_wrapper .user_header .user_details {
+  margin-left: 1rem;
+}
+.chats_wrapper .user_header .user_details span {
+  font-size: 1.4rem;
+}
+.chats_wrapper .user_header .user_details p {
+  font-size: 0.9rem;
+}
+.chats_wrapper .chat_box {
+  width: 100%;
+  height: 650px;
+  background: #00000000;
+}
+.chats_wrapper .chat_text_box {
+  position: relative;
+}
+.chats_wrapper .chat_text_box input {
+  color: #fff;
+  padding: 0 1rem;
+  background: #0A0F0D;
+  width: 1200px;
+  height: 65px;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+.chats_wrapper .chat_text_box button {
+  background: #366DC8;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  font-size: 1.7rem;
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  transition: 0.2s all ease-in-out;
+}
+.chats_wrapper .chat_text_box button:hover {
+  background: #2f62b4;
+}
+
+.user_chat_wrapper {
+  grid-area: user_chat_wrapper;
+  max-height: 700px;
+  overflow-y: auto;
+}
+.user_chat_wrapper::-webkit-scrollbar {
+  width: 0;
+}
+.user_chat_wrapper a {
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.user_chat_wrapper a:hover {
+  background: #212C27;
+}
+.user_chat_wrapper a .user_content {
+  display: flex;
+}
+.user_chat_wrapper a .user_content img {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+}
+.user_chat_wrapper a .user_content .user_details {
+  margin-left: 2rem;
+}
+.user_chat_wrapper a .user_content .user_details span {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.user_chat_wrapper a .user_content .user_details p {
+  font-size: 0.9rem;
+  color: #C4C4C4;
+}
+.user_chat_wrapper a .user_state {
+  width: 12px;
+  height: 12px;
+  background: #79E753;
+  border-radius: 100%;
+}
+
 nav {
   color: #fff;
-  width: 90%;
+  width: 95%;
   margin: auto;
   padding: 2rem 0;
   display: flex;
@@ -22,36 +182,123 @@ nav header > * {
   padding: 0rem 0.5rem;
 }
 nav .nav_btns button {
-  color: #fff;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   color: #FFFFFF;
   font-size: 1rem;
   padding: 0.7rem 2rem;
   margin: 0 0.5rem;
-  border-radius: 12px;
+  border-radius: 0.5rem;
   border: 0px;
 }
 nav .nav_btns .login_btn {
   background-color: #00000000;
 }
 nav .nav_btns .login_btn:hover {
-  background: #000000ad;
+  background-color: #366DC8;
 }
 nav .nav_btns .signup_btn {
-  background-color: #4D85E1;
+  background-color: #366DC8;
 }
 nav .nav_btns .signup_btn:hover {
-  background-color: #366DC8;
+  background-color: #2f62b4;
+}
+
+.signUp_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  color: #fff;
 }
 
 .form_signup {
+  background-color: #212C27;
+  border-radius: 0.5rem;
   padding: 2rem;
 }
-
 .form_signup header {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 1rem;
+}
+.form_signup form .error_text {
+  background: #f5aeb3;
+  border: 2px solid #66131b;
+  color: #66131b;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+.form_signup form .name_details {
+  display: flex;
+}
+.form_signup form .name_details .field:first-child {
+  margin-righ: 1rem;
+}
+.form_signup form .name_details .field:last-child {
+  margin-left: 1rem;
+}
+.form_signup form .field {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.form_signup form .field label {
+  margin-bottom: 0.5rem;
+}
+.form_signup form .field input {
+  outline: none;
+}
+.form_signup form .field .submit_button {
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+  border: 0px;
+  background-color: #366DC8;
+}
+.form_signup form .field .submit_button:hover {
+  background-color: #2f62b4;
+}
+.form_signup form .field i {
+  font-size: 1rem;
+  color: #000;
+  position: absolute;
+  right: 15px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.form_signup form .input input {
+  height: 40px;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+.form_signup form .image input {
+  height: 40px;
+  width: 100%;
+  font-size: 1rem;
+}
+.form_signup .link {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+.form_signup .link a {
+  color: #366DC8;
+}
+.form_signup .link a:hover {
+  text-decoration: underline;
 }
 
 * {
@@ -64,9 +311,4 @@ nav .nav_btns .signup_btn:hover {
 
 body {
   background-color: #0A0F0D;
-}
-
-.wrapper {
-  background: #ffffff;
-  border-radius: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
