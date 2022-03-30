@@ -1,0 +1,169 @@
+.wrapper-chat-box
+    display: grid
+    grid-template-columns: 0.8fr 1.2fr 1fr
+    grid-template-rows: 0.3fr 2fr 1fr
+    gap: 10px 10px
+
+    min-height: 80vh
+    width: 90%
+    margin: auto
+    padding: .5rem
+
+    div
+        border-radius: .5rem
+
+    .user-list-box, .user-chat-box
+        background-color: #fff
+
+    /* User Search Box Styles */ 
+    .user-search-box
+        grid-area: 1 / 1 / 2 / 2
+        position: relative
+
+        input
+            width: 100%
+            height: 100%
+            font-size: 1rem
+            padding-left: 1.7rem
+        i
+            font-size: 24px
+            position: absolute
+            right: 30px
+            top: 20px
+            cursor: pointer
+
+    /* User Lists Styles */ 
+    .user-list-box
+        grid-area: 2 / 1 / 4 / 2
+
+        max-height: 658px
+
+        overflow-y: scroll
+
+        &::-webkit-scrollbar
+            width: 0px
+
+        .user-box
+            transition: all .2s ease-in-out
+            padding: 1rem
+            cursor: pointer
+
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+            &:hover
+                background-color: #B0B0B0
+
+            img
+                border-radius: 100%
+                height: 70px
+                width: 70px
+
+            .user-title
+                font-size: 1.4rem
+                font-weight: 600
+            p
+                font-size: .8rem
+                font-weight: 500
+
+            .unread-messages
+                background-color: #2676D4
+                width: 25px
+                height: 25px
+                text-align: center
+                font-weight: 600
+                color: #fff
+
+            .user-stauts
+                background-color: #2DFF1B
+                width: 10px
+                height: 10px
+
+    /* User Chats/Messages Styles */ 
+    .user-chat-box
+        grid-area: 1 / 2 / 4 / 4
+
+        display: flex
+        flex-direction: column
+        align-items: stretch
+        justify-content: space-between
+
+        .user-chat-box-header
+            background-color: #C4C4C4
+            border-top-left-radius: .5rem
+            border-top-right-radius: .5rem
+            padding: .5rem 0rem .5rem 1rem
+
+            .user-head-info
+                width: 150px
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                i
+                    font-size: 24px
+                    display: none
+
+                img
+                    border-radius: 100%
+                    height: 50px
+                    width: 50px
+
+                .user-info
+                    .user-title
+                        font-size: 1.2rem
+                        font-weight: 500
+                    p
+                        font-size: .8rem
+
+        .messgaes-box
+            border-radius: 0px
+            margin: 0 1rem
+
+            max-height: 570px
+
+            overflow-y: scroll
+
+            &::-webkit-scrollbar
+                width: 0px
+
+            .message-box
+                max-width: calc( 100% - 720px )
+                padding: 1rem
+                word-wrap: break-word
+                font-weight: 500
+
+            .incoming-message
+                background-color: #C4C4C4
+                border-radius: .8rem .8rem .8rem 0
+                margin-right: auto
+
+            .outgoing-message
+                background-color: #5897E1
+                border-radius: .8rem .8rem 0 .8rem
+                margin-left: auto
+                color: #fff
+
+        .chat-box-inputs
+            padding: 1rem
+
+            display: flex
+            align-items: stretch
+            justify-content: center
+
+            input
+                border-top-right-radius: 0rem
+                border-bottom-right-radius: 0rem
+                padding: 1rem .7rem
+                width: 100%
+            button
+                border-top-left-radius: 0rem
+                border-bottom-left-radius: 0rem
+                i
+                    color: #fff
+
+/* No User & No Chats Available Message */ 
+.no-user-message
+    margin: 1rem
+    text-align: center
